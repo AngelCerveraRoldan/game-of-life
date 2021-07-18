@@ -6,6 +6,7 @@ import time
 ## Make 10x10 grid
     ## 1 -> Live cell
     ## 2 -> Dead cell
+gen = 0
 
 grid = [
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -21,7 +22,7 @@ grid = [
 ]
 
 while True:
-    display_grid.print_grid(grid)
+    gen = display_grid.print_grid(grid, gen)
     grid = check_life.life(grid)
 
     time.sleep(1)
